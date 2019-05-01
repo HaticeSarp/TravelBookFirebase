@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "574335421706",
+    "firebase_url": "https://yeni-f57e2.firebaseio.com",
+    "project_id": "yeni-f57e2",
+    "storage_bucket": "yeni-f57e2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:574335421706:android:5f5e559e8469fa0d",
+        "android_client_info": {
+          "package_name": "com.example.travelbook"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "574335421706-kptpaj8c70uevi40r41hgjhir18hurv9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDlzNWTrGQdShson9aPEvSZnhA0Ah42odg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "574335421706-kptpaj8c70uevi40r41hgjhir18hurv9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

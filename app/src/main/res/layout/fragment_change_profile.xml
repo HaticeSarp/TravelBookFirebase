@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragment.ChangeProfileFragment">
+
+    <ImageView
+        android:id="@+id/profile_foto_imageView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="0dp"
+        android:layout_marginRight="139dp"
+        android:src="@drawable/nav_profile_picture" />
+
+    <Button
+        android:id="@+id/fotografsec_button"
+        android:layout_width="366dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/profile_foto_imageView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="@color/buttonrenk"
+        android:text="FOTOĞRAF SEÇ"
+        android:textColor="@color/beyaz" />
+
+    <Button
+        android:id="@+id/fotografkaydet_button"
+        android:layout_width="366dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/fotografsec_button"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:background="@color/buttonrenk"
+        android:text="FOTOĞRAFI KAYDET"
+        android:textColor="@color/beyaz" />
+</RelativeLayout>

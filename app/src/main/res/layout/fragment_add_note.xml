@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragment.AddNoteFragment">
+
+        <EditText
+            android:id="@+id/note_edittext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:layout_marginTop="30dp"
+            android:inputType="textPersonName"
+            android:hint="Yeni Not Giriniz" />
+
+        <Button
+            android:layout_below="@+id/note_edittext"
+            android:id="@+id/new_note_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Yeni Not Ekle" />
+
+        <Button
+            android:layout_below="@+id/new_note_button"
+            android:id="@+id/new_return_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Notlarıma Dön" />
+
+</RelativeLayout>

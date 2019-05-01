@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/register_login_background"
+    tools:context=".Activity.UserSaveActivity">
+
+    <EditText
+        android:id="@+id/emailedittext"
+        android:layout_width="363dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="150dp"
+        android:background="@color/beyaz"
+        android:hint="Email"
+        android:padding="@dimen/activity_vertical_margin" />
+
+    <EditText
+        android:id="@+id/parolaedittext"
+        android:layout_width="363dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/nav_header_vertical_spacing"
+        android:background="@color/beyaz"
+        android:hint="Parola"
+        android:inputType="textPassword"
+        android:padding="@dimen/activity_vertical_margin" />
+
+    <EditText
+        android:id="@+id/parolatekraredittext"
+        android:layout_width="363dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/nav_header_vertical_spacing"
+        android:background="@color/beyaz"
+        android:hint="Parola Tekrar"
+        android:inputType="textPassword"
+        android:padding="@dimen/activity_vertical_margin" />
+
+    <Button
+        android:id="@+id/kayitbutton"
+        android:padding="@dimen/activity_vertical_margin"
+        android:layout_marginTop="@dimen/nav_header_vertical_spacing1"
+        android:layout_width="363dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@color/colorPrimary"
+        android:textColor="@color/beyaz"
+        android:onClick="kayitOl"
+        android:text="Kayıt ol" />
+
+    <ProgressBar
+        android:id="@+id/progressbar"
+        style="?android:attr/progressBarStyle"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

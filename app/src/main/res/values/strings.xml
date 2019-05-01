@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">GirisTasarımActivity</string>
+    <string name="title_activity_menu">MenuActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Konum Ekle</string>
+    <string name="action_home">Anasayfa </string>
+    <string name="action_profile">Profilim</string>
+    <string name="action_photo">Fotoğraf Ekle</string>
+    <string name="action_map">Haritalar</string>
+    <array name="icons">
+        <item name="anasayfa">@drawable/ic_home_black_24dp</item>
+    </array>
+    <string name="title_activity_maps">Map</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_main">MainActivity</string>
+</resources>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".Fragment.ProfileFragment">
+
+    <ImageView
+        android:id="@+id/profil_foto"
+        android:layout_width="118dp"
+        android:layout_height="100dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginRight="142dp"
+        android:src="@drawable/nav_profile_picture" />
+
+
+    <TextView
+        android:layout_below="@+id/profil_foto"
+        android:id="@+id/profil_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_centerHorizontal="true"
+        android:text="Hatice Sarp"
+        android:textSize="16dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_below="@+id/profil_name"
+        android:id="@+id/profile_bio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="Gezmeyi ve Eğlenmeyi severim" />
+
+    <TextView
+        android:layout_below="@+id/profile_bio"
+        android:id="@+id/profile_userplace"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Gezdiğim şehirler:Adana,Mardin,İstanbul,İzmir" />
+
+    <ImageView
+        android:layout_below="@+id/profile_userplace"
+        android:id="@+id/profile_user_instagram"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="40dp"
+        android:layout_centerHorizontal="true"
+        android:layout_height="40dp"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/instagram_ic" />
+
+
+    <ImageView
+        android:id="@+id/profile_degistirme_imageView"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginEnd="186dp"
+        android:layout_marginRight="186dp"
+        android:layout_marginBottom="21dp"
+        android:src="@drawable/editt" />
+
+</RelativeLayout>
