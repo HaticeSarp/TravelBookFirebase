@@ -17,6 +17,8 @@ import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
 import android.widget.Toast;
 
+import com.example.travelbook.Fragment.HomeFragment;
+import com.example.travelbook.Model.LocationModel;
 import com.example.travelbook.R;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -38,11 +40,12 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private GoogleMap mMap;
     LocationManager locationManager;
     LocationListener locationListener;
+
     private FirebaseDatabase firebaseDatabase;
     private DatabaseReference databaseReference;
     private FirebaseAuth firebaseAuth;
-    private FirebaseUser firebaseUser;
 
+    private LocationModel lmodel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,10 +55,12 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
+
+
         firebaseDatabase=FirebaseDatabase.getInstance();
         firebaseAuth=FirebaseAuth.getInstance();
-        firebaseUser=firebaseAuth.getCurrentUser();
-        databaseReference=firebaseDatabase.getReference().child("Locations").child(firebaseUser.getUid());//Tablo ismi
+        databaseReference=firebaseDatabase.getReference().child("Location");//Tablo ismi
+
     }
 
 
@@ -213,19 +218,21 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         }
 
         mMap.addMarker(new MarkerOptions().position(latLng).title(address));
-        Toast.makeText(getApplicationContext(), "New Place Okey!", Toast.LENGTH_SHORT).show();
         try {
-            Double latitude1 = latLng.latitude;
-            Double longitude1 = latLng.longitude;
-            databaseReference.push().setValue(latitude1);
-            databaseReference.push().setValue(longitude1);
-            Toast.makeText(getLayoutInflater().getContext(),"Konum kayıt edildi",Toast.LENGTH_LONG).show();
-
+            insertLocation(latLng.latitude,latLng.longitude);
             Intent intent = new Intent(getApplicationContext(), DetailsActivity.class);
             startActivity(intent);
 
         } catch (Exception e) {
-
+            Toast.makeText(getLayoutInflater().getContext(),"Problem",Toast.LENGTH_SHORT).show();
+            e.printStackTrace();
         }
+    }
+    void insertLocation(Double latitude,Double longitude)
+    {
+        String id=databaseReference.push().getKey();
+        lmodel=new LocationModel(id,latitude,longitude);
+        databaseReference.child(id).setValue(lmodel);
+        Toast.makeText(getLayoutInflater().getContext(),"Konum kayıt edildi",Toast.LENGTH_LONG).show();
     }
 }
